@@ -310,20 +310,42 @@ def truncate_to_sentence(text: str, room: int) -> str:
     return cut.rsplit(" ", 1)[0].rstrip()
 
 
+HASHTAG_RULES = [
+    (re.compile(r"\bИИ\b|искусственн\w+ интеллект|нейросет\w+|neural|GPT|LLM|Claude|Gemini|Grok", re.I), "#ИИ"),
+    (re.compile(r"смартфон|iphone|android|процессор|видеокарт|ноутбук|гаджет|chip|processor", re.I), "#гаджеты"),
+    (re.compile(r"стартап|инвестици|венчур|startup|funding|раунд", re.I), "#стартапы"),
+    (re.compile(r"игр\w+|game|steam|playstation|xbox", re.I), "#игры"),
+    (re.compile(r"приложени\w+|app store|google play|обновлени\w+", re.I), "#приложения"),
+]
+
+
+def pick_hashtags(title: str, desc: str, max_tags: int = 3) -> list[str]:
+    text = f"{title} {desc}"
+    tags = ["#технологии"]
+    for pattern, tag in HASHTAG_RULES:
+        if pattern.search(text) and tag not in tags:
+            tags.append(tag)
+        if len(tags) >= max_tags:
+            break
+    return tags
+
+
 def build_caption(item: dict, has_image: bool) -> str:
     title = item["title"]
     desc = item["desc"]
     link = item["link"]
+    hashtags = " ".join(pick_hashtags(title, desc))
     # Telegram считает лимит по видимому тексту, ссылка в href в него не входит.
     limit = CAPTION_LIMIT if has_image else TEXT_LIMIT
     header = f"<b>{html.escape(title)}</b>\n\n"
     read_more = f"\n\n<a href=\"{html.escape(link)}\">{READ_MORE_LABEL}</a>"
-    visible_len = len(title) + 2 + 2 + len(READ_MORE_LABEL)  # заголовок + переносы + текст ссылки
+    footer = f"\n\n{hashtags}"
+    visible_len = len(title) + 2 + 2 + len(READ_MORE_LABEL) + len(hashtags) + 2
     room = limit - visible_len - 10
     if room < 0:
         room = 0
     desc = truncate_to_sentence(desc, room)
-    return header + html.escape(desc) + read_more
+    return header + html.escape(desc) + read_more + footer
 
 
 def telegram_call(url: str, params: dict) -> dict:
