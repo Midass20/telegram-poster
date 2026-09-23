@@ -1,0 +1,6 @@
+.env
+post_log.txt
+logo_variant_*.png
+logo.png
+__pycache__/
+*.pyc
