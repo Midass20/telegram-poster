@@ -6,6 +6,7 @@
 """
 import html
 import json
+import os
 import random
 import re
 import sys
@@ -434,6 +435,21 @@ def telegram_post(token: str, chat_id: str, item: dict) -> dict:
     return result
 
 
+MIN_INTERVAL_MIN = 110  # расписание тикает чаще, чем постим: пост не раньше чем через ~2ч после прошлого
+
+
+def minutes_since_last_post(history: list) -> float | None:
+    dates = []
+    for h in history:
+        try:
+            dates.append(datetime.fromisoformat(h["date"]))
+        except (KeyError, ValueError):
+            continue
+    if not dates:
+        return None
+    return (datetime.now(timezone.utc) - max(dates)).total_seconds() / 60
+
+
 def main() -> int:
     env = load_env()
     token = env.get("TELEGRAM_BOT_TOKEN")
@@ -443,6 +459,13 @@ def main() -> int:
         return 1
 
     history = load_history()
+
+    if os.environ.get("FORCE_POST") != "1":
+        since = minutes_since_last_post(history)
+        if since is not None and since < MIN_INTERVAL_MIN:
+            log(f"Not due yet: last post {since:.0f} min ago (< {MIN_INTERVAL_MIN}), skipping")
+            return 0
+
     item = pick_article(history)
     if item is None:
         log("No new article found across all feeds (all already posted recently)")
