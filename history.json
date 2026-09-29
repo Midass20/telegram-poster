@@ -148,5 +148,10 @@
     "url": "https://www.wired.com/story/openai-pauses-training-most-powerful-models-after-rogue-agents-target-government/",
     "title": "OpenAI приостанавливает обучение своих самых мощных моделей после того, как агенты-изгои нацелились на правительство",
     "date": "2026-09-28T17:49:29+00:00"
+  },
+  {
+    "url": "https://habr.com/ru/articles/1087966/?utm_campaign=1087966&utm_source=habrahabr&utm_medium=rss",
+    "title": "Сделал себе тренера на Claude Code и выложил его в open source",
+    "date": "2026-09-29T09:43:31+00:00"
   }
 ]
