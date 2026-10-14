@@ -373,5 +373,10 @@
     "url": "https://3dnews.ru/1149906",
     "title": "ИИ генерирует столько кода, что Anthropic не успевает его обрабатывать — пришлось изобретать собственный Git",
     "date": "2026-10-14T14:04:08+00:00"
+  },
+  {
+    "url": "https://habr.com/ru/companies/bothub/articles/1094492/?utm_campaign=1094492&utm_source=habrahabr&utm_medium=rss",
+    "title": "Повышаем температуру, или почему один промпт дает разные сюжеты",
+    "date": "2026-10-14T18:32:01+00:00"
   }
 ]
