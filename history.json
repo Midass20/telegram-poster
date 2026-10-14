@@ -368,5 +368,10 @@
     "url": "https://www.wired.com/story/an-openai-employee-allegedly-used-a-chatbot-to-help-plant-a-recording-device-at-the-office/",
     "title": "Сотрудник OpenAI предположительно использовал чат-бота для установки записывающего устройства в офисе",
     "date": "2026-10-14T08:36:23+00:00"
+  },
+  {
+    "url": "https://3dnews.ru/1149906",
+    "title": "ИИ генерирует столько кода, что Anthropic не успевает его обрабатывать — пришлось изобретать собственный Git",
+    "date": "2026-10-14T14:04:08+00:00"
   }
 ]
