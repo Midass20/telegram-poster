@@ -518,5 +518,10 @@
     "url": "https://3dnews.ru/1150307",
     "title": "«Памяти всегда можно использовать больше»: глава Nvidia отверг опасения по поводу перепроизводства",
     "date": "2026-10-22T18:40:46+00:00"
+  },
+  {
+    "url": "https://arstechnica.com/security/2026/10/disgraced-emudhra-drops-out-of-tls-business-following-certificate-debacle/",
+    "title": "Опальный eMudhra выбывает из бизнеса TLS после использования закрытого ключа сертификата 4",
+    "date": "2026-10-23T08:26:59+00:00"
   }
 ]
