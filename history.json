@@ -568,5 +568,10 @@
     "url": "https://arstechnica.com/information-technology/2026/10/300-tor-exit-nodes-hijacked-to-intercept-ssh-traffic-and-retrieve-plaintext-email/",
     "title": "333 выходных узла Tor перехвачены для перехвата SSH-трафика и получения электронной почты с открытым текстом",
     "date": "2026-10-25T17:07:21+00:00"
+  },
+  {
+    "url": "https://www.wired.com/story/kernel-panic-the-php-meltdown-shows-how-ai-makes-bugs-more-exploitable/",
+    "title": "Сбой PHP показывает, как ИИ делает ошибки более пригодными для использования",
+    "date": "2026-10-25T19:48:45+00:00"
   }
 ]
