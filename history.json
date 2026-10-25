@@ -563,5 +563,10 @@
     "url": "https://www.wired.com/story/what-the-us-anti-data-center-movement-can-learn-from-everywhere-else/",
     "title": "Чему движение США против центров обработки данных может научиться за рубежом",
     "date": "2026-10-25T13:15:52+00:00"
+  },
+  {
+    "url": "https://arstechnica.com/information-technology/2026/10/300-tor-exit-nodes-hijacked-to-intercept-ssh-traffic-and-retrieve-plaintext-email/",
+    "title": "333 выходных узла Tor перехвачены для перехвата SSH-трафика и получения электронной почты с открытым текстом",
+    "date": "2026-10-25T17:07:21+00:00"
   }
 ]
