@@ -643,5 +643,10 @@
     "url": "https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/",
     "title": "Ошибка выполнения кода в прошивке UEFI затрагивает большинство серверов на планете Земля",
     "date": "2026-10-30T16:40:06+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/",
+    "title": "Новый ИИ-агент Zest находит рестораны и бронирует по SMS",
+    "date": "2026-10-30T21:04:18+00:00"
   }
 ]
