@@ -828,5 +828,10 @@
     "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
     "title": "Агент по кодированию Grok Build сливает огромное количество конфиденциальной информации, часть из которой принадлежит SpaceXSI",
     "date": "2026-11-14T20:56:50+00:00"
+  },
+  {
+    "url": "https://arstechnica.com/security/2026/11/vulnerability-that-lets-hackers-ssh-into-linux-devices-is-under-active-exploitation/",
+    "title": "Уязвимость, позволяющая хакерам подключаться к устройствам под управлением Linux по протоколу SSH, активно эксплуатируется",
+    "date": "2026-11-15T10:41:22+00:00"
   }
 ]
